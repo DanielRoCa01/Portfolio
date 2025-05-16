@@ -1,0 +1,28 @@
+---
+import { getEntry } from "astro:content";
+import FadeInGsap from "./animations/FadeInGsap";
+import ScrollTypewriter from "./animations/ScrollTypeWritter"; // Asegúrate de que el path sea correcto
+
+
+
+---
+
+    <FadeInGsap client:only >
+     
+      <section id="about" class="Info   w-160 max-h-fit  mx-auto mt-40 mb-40 pt-20 ">
+        <h2 class="text-4xl max-h-fit w-60 font-thin m-2 -ml-15 rounded-md bg-slate-800 text-amber-50 p-1 text-right">
+          ¿QUIEN SOY?
+        </h2>
+        <div class="border-x-4 rounded-md text-lg p-4">
+  
+          
+            <ScrollTypewriter
+              client:only
+              text={`<p>Mi nombre es <b>Daniel Rodríguez Camacho</b>, <b>desarrollador full-stack</b> con especial interés y orientación hacia el <b>desarrollo backend</b> y el entorno <b>Cloud</b>. A lo largo de mi formación y experiencia, me he centrado en construir una <b>base sólida</b> que me permita comprender los <b>patrones</b> y <b>principios</b> que rigen el funcionamiento de los <b>sistemas</b> y <b>lenguajes informáticos</b>.</p><p>Soy una persona <b>proactiva</b>, <b>organizada</b> y <b>adaptable</b>, con facilidad para el <b>trabajo en equipo</b> y una fuerte actitud hacia el <b>aprendizaje continuo</b>. Me gusta asumir <b>nuevos retos</b> y me adapto con rapidez a distintos roles y entornos de trabajo, siempre con el objetivo de aportar <b>valor técnico</b> y <b>humano</b> a los proyectos en los que participo.</p><p>Actualmente, estoy en proceso de <b>especialización</b> en <b>tecnologías Cloud</b>, aprendiendo herramientas que permitan <b>soluciones escalables</b>, <b>seguras</b> y <b>eficientes</b> en la <b>arquitectura de sistemas modernos</b>.</p>`}
+            />
+         
+        </div>
+        
+      </section>
+    </FadeInGsap>
+

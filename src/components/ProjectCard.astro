@@ -1,0 +1,62 @@
+---
+import type { AstroComponentFactory } from 'astro/runtime/server/render/astro/index.js';
+import GitHub from './icons/GitHub.astro';
+import ProjectDropdown from './animations/ProjectDropdown.jsx'; // Este sigue en React
+interface Props {
+  title: string;
+  subtitle: string;
+  image: string|undefined|null;
+  link?:string
+  repoLink?: string;
+  techIcons: AstroComponentFactory[]; // ← Aquí defines que son componentes Astro
+}
+const {
+  title,
+  subtitle,
+  image,
+  link,
+  repoLink,
+  techIcons = []
+} = Astro.props;
+---
+
+
+  <div class="border-x-4 rounded-md text-lg p-2">
+    <div class="flex justify-center ml-5">
+      <h2 class="text-xl max-h-fit max-w-fit font-thin m-2 -ml-15 rounded-md bg-slate-800 text-amber-50 p-1 text-right">
+        {subtitle}
+      </h2>
+    </div>
+
+    <div class="flex">
+      <div class="flex border-y-4 w-110 justify-center py-3 rounded-md group">
+        <a href={link} target="_blank" class="text-3xl font-thin group-hover:font-bold transition-all text-center">
+          {title}
+        </a>
+      </div>
+
+      {repoLink && (
+       <a
+  href={repoLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="flex items-center justify-center py-4 px-2 border-y-4 rounded-md hover:bg-slate-900 group transition-all duration-500"
+>
+  <GitHub class="size-7 group-hover:text-amber-50 transition-all duration-500" />
+</a>
+
+      )}
+    </div>
+
+    <div class="flex justify-center rounded-md space-x-2 text-lg p-2">
+      {techIcons.map((Icon) => (
+        <Icon class="size-7" />
+        
+      ))}
+    </div>
+
+    <ProjectDropdown image={image} client:load>
+      <slot />
+    </ProjectDropdown>
+  </div>
+

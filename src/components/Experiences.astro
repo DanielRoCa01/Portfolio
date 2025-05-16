@@ -1,0 +1,36 @@
+---
+import FadeInGsap from "./animations/FadeInGsap";
+import { getCollection } from "astro:content";
+import ExperienceCard from "./ExperienceCard.astro";
+
+// Mapeo dinámico de nombres a íconos
+import { icons } from "./icons";
+
+const experiences = await getCollection('experiences');
+
+
+---
+
+
+  <section id="experience" class="experiencia w-160 max-h-fit mx-auto pt-20 mb-40">
+    <h2 class="text-4xl w-fit font-thin m-2 -ml-15 rounded-md bg-slate-800 text-amber-50 p-1 text-right">
+      ¿CUÁL ES MI EXPERIENCIA?
+    </h2>
+    <div class="bg-slate-900 w-1 h-8 mx-auto" />
+    {
+    
+      experiences.map(async (exp) => {
+        const { title, year, techIcons = [] } = exp.data;
+        const { Content } = await exp.render();
+        const iconComponents = techIcons.map(name => icons[name]).filter(Boolean);
+    
+        return (
+        <ExperienceCard title={title} year={year} techIcons={iconComponents}>
+          <Content />
+        </ExperienceCard>
+        );
+      })
+    }
+    <div class="bg-slate-900 w-1 h-8 mx-auto" />
+  </section>
+

@@ -1,0 +1,49 @@
+---
+import CV from "./icons/CV.astro";
+import GitHub from "./icons/GitHub.astro";
+import Linkedin from "./icons/Linkedin.astro";
+import Mail from "./icons/Mail.astro";
+import Typewriter from "./animations/Typewriter";
+---
+
+<div class="px-4  mx-auto flex ">
+    <div class="flex flex-col justify-center ml-13 rounded-md">	
+        <a href="https://drive.google.com/file/d/10Ry1UvJvxldjcoeBOVHrznR8u28b73_-/view?usp=sharing"  target="_blank"
+        rel="noopener noreferrer">
+        <div class="relative group w-fit mx-auto">
+            
+            <img
+              class="border-y-4 rounded-md size-30 transition duration-300 ease-in-out group-hover:brightness-50"
+              src="/portfoli_prueba.png"
+              alt="Imagen Daniel Rodriguez"
+            />
+        
+            {/* Ícono superpuesto al hacer hover */}
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+              {/* Puedes usar cualquier icono, como uno de Lucide o HeroIcons */}
+                <CV class="size-8 text-amber-50"/>
+            </div>
+          </div>
+        <div class="flex flex-col justify-center mx-auto ">	
+            <span class=" max-w-50 border-y-3 text-center text-xl rounded-md mt-4">
+                <Typewriter delay={50} client:load text="Full-Stack Developer,  Cloud Architect" />
+            </span>
+        </div>
+        </a>
+    </div>
+    
+    <div class="ml-7">
+        <a href="https://www.linkedin.com/in/daniel-rodr%C3%ADguez-camacho-1143b82a3/" target="_blank" rel="noopener noreferrer">
+            <div class="py-3 px-2 mb-3 border-y-2 rounded-md hover:bg-slate-900 group transition-all duration-500">
+            <Linkedin class="size-7 group-hover:text-amber-50 transition-all duration-500" />
+          </div></a>
+        <a href="https://github.com/DanielRoCa01" target="_blank" rel="noopener noreferrer">
+            <div class="py-3 px-2 my-3 border-y-2 rounded-md hover:bg-slate-900 group transition-all duration-500">
+            <GitHub class="size-7 group-hover:text-amber-50 transition-all duration-500"/>
+        </div></a>
+        <a href="mailto:danielrodriguezcamacho21@gmail.com" target="_blank" rel="noopener noreferrer">
+            <div class="py-3 px-2 mt-3 border-y-2 rounded-md hover:bg-slate-900 group transition-all duration-500">
+            <Mail class="size-7 group-hover:text-amber-50 transition-all duration-500"/>
+        </div></a>
+    </div>
+</div>

@@ -1,11 +1,57 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+﻿---
 
+import GitHub from '../components/icons/GitHub.astro';
+import Linkedin from '../components/icons/Linkedin.astro';
+import Mail from '../components/icons/Mail.astro';
+import Typewriter from '../components/animations/Typewriter.jsx';
+import Layout from '../layouts/Layout.astro';
+import FadeInGsap from '../components/animations/FadeInGsap.jsx'
+import InfoSection from '../components/InfoSection.astro';
+import CV from '../components/icons/CV.astro';
+import Presentacion from '../components/Presentacion.astro';
+import ProjectsSection from '../components/ProjectsSection.astro';
+import Experiences from '../components/Experiences.astro';
+import Extra from '../components/Extra.astro';
+import Busqueda from '../components/Busqueda.astro';
+import ContactME from '../components/ContactME.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<main class="flex flex-col justify-center">
+		<section class="mx-auto pt-26 pb-5">
+			<div class="flex flex-col justify-center ml-17 pl-4 text-slate-700   mb-10">
+				<p class="">"Lo importante es no dejar de hacerse preguntas." </p>
+				<span class="ml-4 ">-Albert Einstein-</span>
+			</div>
+
+			<div class=" text-6xl border-zinc-800  font-extralight border-y-4 border-spacing-96 py-2 rounded-md">
+				<Typewriter delay={50} client:load text="¿Daniel Rodríguez?" /></section>
+   
+			</div>
+			
+		<section class="flex flex-col justify-center    animate-fade-right animate-duration-3000"> 
+			<Presentacion/>
+			
+		</section>
+		
+			<InfoSection  />
+			
+		
+			<ProjectsSection/>
+		
+			<Experiences/>
+		
+			<Busqueda/>
+	
+			<Extra/>
+
+			<ContactME/>
+		
+	</main>
+	
+
+
+	  
 </Layout>

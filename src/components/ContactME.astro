@@ -1,0 +1,47 @@
+---
+
+import FadeInX from "./animations/FadeInX";
+import Send from "./icons/Send.astro";
+
+// No necesitas props, pero podrías agregar `email` como prop si querés.
+---
+<section id="contact" class=" w-160 max-h-fit  mx-auto mt-40 mb-20 pt-20 ">
+    <h2 class="text-4xl max-h-fit w-fit font-thin m-2 -ml-15 rounded-md bg-slate-800 text-amber-50 p-1 text-right">
+        ¿EN QUÉ PUEDO AYUDARTE?
+      </h2>
+    <div class="w-full max-w-xl text-center">
+      
+  
+      <form 
+        method="POST" 
+        action="https://formspree.io/f/xbloqldw" 
+        class="flex flex-col gap-4"
+      >
+      <FadeInX direction="right" client:visible>
+        <input 
+        type="email" 
+        name="email" 
+        required 
+        placeholder="Tu correo" 
+        class="p-3 rounded-md w-full bg-slate-600 text-amber-50 border-3 border-slate-900 focus:outline-none  focus:border-amber-50 focus:ring-2 focus:ring-slate-900"
+      />
+      </FadeInX>
+      <FadeInX client:visible>
+        <textarea 
+          name="message" 
+          rows="5" 
+          required 
+          placeholder="Tu mensaje" 
+          class="p-3 rounded-md w-full bg-slate-600 text-amber-50 border-3 border-slate-900 focus:outline-none focus:border-amber-50 focus:ring-2 focus:ring-slate-900"
+        ></textarea>
+        </FadeInX>
+        <button 
+          type="submit" 
+          class="border-y-4 font-semibold py-3 w-full rounded-md hover:bg-slate-800 hover:text-amber-50 transition flex justify-center cursor-pointer"
+        >
+         Enviar <Send class="size-7 "/>
+        </button>
+      </form>
+    </div>
+  </section>
+  
