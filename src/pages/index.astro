@@ -19,18 +19,21 @@ import ContactME from '../components/ContactME.astro';
 ---
 
 <Layout>
-	<main class="flex flex-col justify-center">
-		<section class="mx-auto pt-26 pb-5">
-			<div class="flex flex-col justify-center ml-17 pl-4 text-slate-700   mb-10">
-				<p class="">"Lo importante es no dejar de hacerse preguntas." </p>
-				<span class="ml-4 ">-Albert Einstein-</span>
-			</div>
+	<main class="flex flex-col justify-center px-4 sm:px-6">
+		<section class="mx-auto pt-20 pb-10 px-4 sm:px-6 max-w-screen-lg">
 
-			<div class=" text-6xl border-zinc-800  font-extralight border-y-4 border-spacing-96 py-2 rounded-md">
-				<Typewriter delay={50} client:load text="¿Daniel Rodríguez?" /></section>
-   
+			<!-- Cita -->
+			<div class="flex flex-col justify-center text-slate-700 mb-10 text-center sm:text-left">
+			  <p>"Lo importante es no dejar de hacerse preguntas."</p>
+			  <span class="mt-1 text-sm">- Albert Einstein -</span>
 			</div>
-			
+		  
+			<!-- Nombre con Typewriter -->
+			<div class="text-3xl sm:text-5xl lg:text-6xl font-extralight border-y-4 border-zinc-800 py-2 rounded-md text-center">
+			  <Typewriter delay={50} client:load text="Daniel Rodríguez" />
+			</div>
+		  </section>
+		  
 		<section class="flex flex-col justify-center    animate-fade-right animate-duration-3000"> 
 			<Presentacion/>
 			

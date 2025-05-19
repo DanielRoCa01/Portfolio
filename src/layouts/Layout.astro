@@ -4,6 +4,7 @@ import "../styles/global.css";
 import GitHub from '../components/icons/GitHub.astro';
 import Mail from '../components/icons/Mail.astro';
 import Linkedin from '../components/icons/Linkedin.astro';
+import CV from '../components/icons/CV.astro';
 ---
 <!doctype html>
 <html lang="en" class="bg-amber-50">
@@ -15,14 +16,21 @@ import Linkedin from '../components/icons/Linkedin.astro';
   </head>
 
   <div class="flex justify-center sticky top-0 z-50 group">
-    <header class="w-full max-w-xl rounded-md px-6 text-lg border-slate-900 border-y-2 shadow-sm text-amber-50 backdrop-blur-md transform  duration-300 group-hover:translate-y-5 group-hover:bg-slate-800 transition -translate-y-5">
+    <header class="w-full max-w-xl rounded-md px-6 text-lg h-fit
+     border-slate-900 border-y-2 shadow-sm lg:text-amber-50 backdrop-blur-md transform translate-y-5
+       duration-300 lg:group-hover:translate-y-6 lg:group-hover:bg-slate-800 transition lg:-translate-y-6">
       <nav class="flex justify-center items-center">
-        <ul class="flex gap-6 text-base font-medium">
-          <li><a href="#about" class="hover:underline">Sobre mí</a></li>
-          <li><a href="#projects" class="hover:underline">Proyectos</a></li>
-          <li><a href="#experience" class="hover:underline">Experiencia</a></li>
-          <li><a href="#extra" class="hover:underline">Extras</a></li>
-          <li><a href="#contact" class="hover:underline">Contacto</a></li>
+        <ul class="flex gap-6 text-base font-medium m-1">
+          <li><a href="#about" class="hover:underline rounded-md p-1 active:text-amber-50 active:bg-slate-800
+            lg:active:bg-amber-50 lg:active:text-slate-800 transition ">Sobre mí</a></li>
+          <li><a href="#projects" class="hover:underline rounded-md p-1 active:text-amber-50 active:bg-slate-800
+            lg:active:bg-amber-50 lg:active:text-slate-800 transition">Proyectos</a></li>
+          <li><a href="#experience" class="hover:underline rounded-md p-1 active:text-amber-50 active:bg-slate-800 
+            lg:active:bg-amber-50 lg:active:text-slate-800 transition">Experiencia</a></li>
+          <li><a href="#extra" class="hover:underline rounded-md p-1 active:text-amber-50 active:bg-slate-800
+            lg:active:bg-amber-50 lg:active:text-slate-800 transition">Extras</a></li>
+          <li><a href="#contact" class="hover:underline rounded-md p-1 active:text-amber-50 active:bg-slate-800
+            lg:active:bg-amber-50 lg:active:text-slate-800 transition">Contacto</a></li>
         </ul>
       </nav>
     </header>
@@ -49,6 +57,7 @@ import Linkedin from '../components/icons/Linkedin.astro';
       </a>
       <a href="https://www.linkedin.com/in/daniel-rodr%C3%ADguez-camacho-1143b82a3/" target="_blank" class="hover:scale-110 transition-colors"><Linkedin class="size-7"/></a>
       <a href="mailto:danielrodriguezcamacho21@gmail.com" class="hover:scale-110 transition-colors"><Mail class="size-7"/></a>
+      <a href="https://drive.google.com/file/d/10Ry1UvJvxldjcoeBOVHrznR8u28b73_-/view?usp=sharing" class="hover:scale-110 transition-colors"><CV class="size-7"/></a>
     </div>
   </footer>
   

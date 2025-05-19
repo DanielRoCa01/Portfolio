@@ -25,7 +25,8 @@ const projects = await getCollection('projects');
       ¿QUE HE HECHO?
     </h2>
     <div class="border-l-4 w-135 rounded-md text-lg p-4 ml-10 gap-10 flex flex-col">
-      {projects.map(async (project) =>{
+      {await Promise.all(
+    projects.slice().reverse().map(async (project) =>{
         const { title, subtitle, image, link, repoLink, techIcons = [] } = project.data;
        const { Content } = await project.render();
        const techIconsComponents = techIcons.map(name => icons[name]).filter(Boolean);
@@ -41,7 +42,7 @@ const projects = await getCollection('projects');
         >
           <Content />
         </ProjectCard>
-      )})}
+      )}))}
     </div>
   </section>
 </FadeInGsap>
