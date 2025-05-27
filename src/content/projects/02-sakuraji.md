@@ -2,7 +2,7 @@
 title: "SAKURAJI - LANGUAGE APP"
 subtitle: "¿Y si pudiésemos estudiar cualquier idioma?"
 image: "/Sakuraji-Min.png"
-link: "https://sakuraji.onrender.com/"
+link: "https://sakuraji.daniel-rc.com/"
 repoLink: "https://github.com/DanielRoCa01/Sakuraji"
 techIcons:
   - React

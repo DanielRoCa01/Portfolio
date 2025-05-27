@@ -2,6 +2,7 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/render/astro/index.js';
 import GitHub from './icons/GitHub.astro';
 import ProjectDropdown from './animations/ProjectDropdown.jsx'; // Este sigue en React
+import AstroIcon from './icons/AstroIcon.astro';
 interface Props {
   title: string;
   subtitle: string;
@@ -49,6 +50,7 @@ const {
     </div>
 
     <div class="flex justify-center rounded-md space-x-2 text-lg p-2">
+      
       {techIcons.map((Icon) => (
         <Icon class="size-7" />
         

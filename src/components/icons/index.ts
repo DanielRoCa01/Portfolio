@@ -8,6 +8,7 @@ import Laravel from './Laravel.astro';
 import Linux from './Linux.astro';
 import PHP from './PHP.astro';
 import TypeScript from './TypeScript.astro';
+import Astro from './AstroIcon.astro';
 
 export const icons = {
   Docker,
@@ -20,4 +21,5 @@ export const icons = {
   Linux,
   PHP,
   TypeScript,
+  Astro
 };

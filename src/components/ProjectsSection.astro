@@ -3,15 +3,9 @@
 import FadeInGsap from "./animations/FadeInGsap";
 
  // asegúrate de tener este ícono
-import Docker from "./icons/Docker.astro";
-import GitHub from "./icons/GitHub.astro";
-import React from "./icons/React.astro";
-import Spring from "./icons/Spring.astro";
-import ProjectDropdown from "./animations/ProjectDropdown";
+
 import ProjectCard from "./ProjectCard.astro";
-import MySQL from "./icons/MySQL.astro";
-import Java from "./icons/Java.astro";
-import TypeScript from "./icons/TypeScript.astro";
+
 import { getCollection } from "astro:content";
 import { icons } from "./icons";
 
@@ -22,7 +16,7 @@ const projects = await getCollection('projects');
  
   <section id="projects" class="proyectos   w-160 max-h-fit  mx-auto pt-20 mb-40" >
     <h2 class="text-4xl max-h-fit w-fit font-thin m-2 -ml-15 rounded-md bg-slate-800 text-amber-50 p-1 text-right">
-      ¿QUE HE HECHO?
+      ¿QUÉ HE HECHO?
     </h2>
     <div class="border-l-4 w-135 rounded-md text-lg p-4 ml-10 gap-10 flex flex-col">
       {await Promise.all(
